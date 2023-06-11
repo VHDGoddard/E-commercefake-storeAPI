@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <script src="jquery-3.7.0.min.js"></script>
+  <script src="https://kit.fontawesome.com/8abc0a1ef2.js" crossorigin="anonymous"></script>
+  <script src="Script.js"></script>
+  <title>Pakistan Store</title>
+</head>
+
+<body>
+
+  <header>
+    <img src="/E-commerce2/imagens/paaaaaakistan.avif" alt="logo" id="logo">
+    <p>Vinícius Henrique Dutra Goddard <br>Ciências da Computação PUC-MINAS - 445576</p>
+  </header>
+
+  <div class="menu">
+    <div class="topnav">
+      <a href="index.html">Home</a>
+      <a href="#login">Login</a>
+      <a href="#ajuda">Ajuda</a>
+      <a href="#contato">Contato</a>
+      <input id="search" type="text" placeholder="Search.." oninput="filterProducts(this.value)">
+    </div>
+  </div>
+
+  <aside>
+    <div class="sidebar">
+      <h1>FILTROS</h1>
+      <ul class="itens">
+        <li>
+          <a href="#" class="filtro-item" data-category="all">Todos</a>
+        </li>
+        <li>
+          <a href="#" class="filtro-item" data-category="acessorios">Acessórios</a>
+        </li>
+        <li>
+          <a href="#" class="filtro-item" data-category="masculinas">Roupas Masculinas</a>
+        </li>
+        <li>
+          <a href="#" class="filtro-item" data-category="femininas">Roupas Femininas</a>
+        </li>
+        <li>
+          <a href="#" class="filtro-item" data-category="eletronicos">Eletrônicos</a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <section id="products-section">
+      <div class="card" data-category="acessorios">
+        <div class="card-image">
+          <img src="" alt="Imagem do Produto">
+        </div>
+        <h3 class="card-title">Card 1</h3>
+        <p class="card-description">Descrição do Card 1</p>
+        <button onclick="window.location.href='/E-commerce2/Descrições/produto1.html'">Ver Mais</button>
+      </div>
+
+      <div class="card" data-category="masculinas">
+        <div class="card-image">
+          <img src="" alt="Imagem do Produto">
+        </div>
+        <h3 class="card-title">Card 2</h3>
+        <p class="card-description">Descrição do Card 2</p>
+        <button onclick="window.location.href='/E-commerce2/Descrições/produto2.html'">Ver Mais</button>
+      </div>
+
+      <div class="card" data-category="masculinas">
+        <div class="card-image">
+          <img src="" alt="Imagem do Produto">
+        </div>
+        <h3 class="card-title">Card 3</h3>
+        <p class="card-description">Descrição do Card 3</p>
+        <button onclick="window.location.href='/E-commerce2/Descrições/produto3.html'">Ver Mais</button>
+      </div>
+
+      <div class="card" data-category="masculinas">
+        <div class="card-image">
+          <img src="" alt="Imagem do Produto">
+        </div>
+        <h3 class="card-title">Card 4</h3>
+        <p class="card-description">Descrição do Card 4</p>
+        <button onclick="window.location.href='/E-commerce2/Descrições/produto4.html'">Ver Mais</button>
+      </div>
+
+      <div class="card" data-category="acessorios">
+        <div class="card-image">
+          <img src="" alt="Imagem do Produto">
+        </div>
+        <h3 class="card-title">Card 5</h3>
+        <p class="card-description">Descrição do Card 5</p>
+        <button onclick="window.location.href='/E-commerce2/Descrições/produto5.html'">Ver Mais</button>
+      </div>
+
+      <div class="card" data-category="acessorios">
+        <div class="card-image">
+          <img src="" alt="Imagem do Produto">
+        </div>
+        <h3 class="card-title">Card 6</h3>
+        <p class="card-description">Descrição do Card 6</p>
+        <button onclick="window.location.href='/E-commerce2/Descrições/produto6.html'">Ver Mais</button>
+      </div>
+
+      <div class="card" data-category="acessorios">
+        <div class="card-image">
+          <img src="" alt="Imagem do Produto">
+        </div>
+        <h3 class="card-title">Card 7</h3>
+        <p class="card-description">Descrição do Card 7</p>
+        <button onclick="window.location.href='/E-commerce2/Descrições/produto7.html'">Ver Mais</button>
+      </div>
+
+      <div class="card" data-category="acessorios">
+        <div class="card-image">
+          <img src="" alt="Imagem do Produto">
+        </div>
+        <h3 class="card-title">Card 8</h3>
+        <p class="card-description">Descrição do Card 8</p>
+        <button onclick="window.location.href='/E-commerce2/Descrições/produto8.html'">Ver Mais</button>
+      </div>
+
+      <div class="card" data-category="eletronicos">
+        <div class="card-image">
+          <img src="" alt="Imagem do Produto">
+        </div>
+        <h3 class="card-title">Card 9</h3>
+        <p class="card-description">Descrição do Card 9</p>
+        <button onclick="window.location.href='/E-commerce2/Descrições/produto9.html'">Ver Mais</button>
+      </div>
+
+      <div class="card" data-category="eletronicos">
+        <div class="card-image">
+          <img src="" alt="Imagem do Produto">
+        </div>
+        <h3 class="card-title">Card 10</h3>
+        <p class="card-description">Descrição do Card 10</p>
+        <button onclick="window.location.href='/E-commerce2/Descrições/produto10.html'">Ver Mais</button>
+      </div>
+
+      <div class="card" data-category="eletronicos">
+        <div class="card-image">
+          <img src="" alt="Imagem do Produto">
+        </div>
+        <h3 class="card-title">Card 11</h3>
+        <p class="card-description">Descrição do Card 11</p>
+        <button onclick="window.location.href='/E-commerce2/Descrições/produto11.html'">Ver Mais</button>
+      </div>
+
+      <div class="card" data-category="eletronicos">
+        <div class="card-image">
+          <img src="" alt="Imagem do Produto">
+        </div>
+        <h3 class="card-title">Card 12</h3>
+        <p class="card-description">Descrição do Card 12</p>
+        <button onclick="window.location.href='/E-commerce2/Descrições/produto12.html'">Ver Mais</button>
+      </div>
+
+      <div class="card" data-category="eletronicos">
+        <div class="card-image">
+          <img src="" alt="Imagem do Produto">
+        </div>
+        <h3 class="card-title">Card 13</h3>
+        <p class="card-description">Descrição do Card 13</p>
+        <button onclick="window.location.href='/E-commerce2/Descrições/produto13.html'">Ver Mais</button>
+      </div>
+
+      <div class="card" data-category="eletronicos">
+        <div class="card-image">
+          <img src="" alt="Imagem do Produto">
+        </div>
+        <h3 class="card-title">Card 14</h3>
+        <p class="card-description">Descrição do Card 14</p>
+        <button onclick="window.location.href='/E-commerce2/Descrições/produto14.html'">Ver Mais</button>
+      </div>
+
+      <div id="none" class="card" data-category="aviação" style="display:none; background-color: #100040; border: 0px;">
+        <div class="card-image" style="display:none">
+          <img src="" alt="Imagem do Produto" style="display:none">
+        </div>
+        <h3 class="card-title" style="display:none">Card 15</h3>
+        <p class="card-description" style="display:none">Descrição do Card 15</p>
+        <button onclick="window.location.href='/E-commerce2/Descrições/produto15.html'" style="display:none">Ver Mais</button>
+      </div>
+
+      <div class="card" data-category="femininas">
+        <div class="card-image">
+          <img src="" alt="Imagem do Produto">
+        </div>
+        <h3 class="card-title">Card 16</h3>
+        <p class="card-description">Descrição do Card 16</p>
+        <button onclick="window.location.href='/E-commerce2/Descrições/produto16.html'">Ver Mais</button>
+      </div>
+
+      <div class="card" data-category="femininas">
+        <div class="card-image">
+          <img src="" alt="Imagem do Produto">
+        </div>
+        <h3 class="card-title">Card 17</h3>
+        <p class="card-description">Descrição do Card 17</p>
+        <button onclick="window.location.href='/E-commerce2/Descrições/produto17.html'">Ver Mais</button>
+      </div>
+
+      <div class="card" data-category="femininas">
+        <div class="card-image">
+          <img src="" alt="Imagem do Produto">
+        </div>
+        <h3 class="card-title">Card 18</h3>
+        <p class="card-description">Descrição do Card 18</p>
+        <button onclick="window.location.href='/E-commerce2/Descrições/produto18.html'">Ver Mais</button>
+      </div>
+
+      <div class="card" data-category="femininas">
+        <div class="card-image">
+          <img src="" alt="Imagem do Produto">
+        </div>
+        <h3 class="card-title">Card 19</h3>
+        <p class="card-description">Descrição do Card 19</p>
+        <button onclick="window.location.href='/E-commerce2/Descrições/produto19.html'">Ver Mais</button>
+      </div>
+
+    </section>
+  </main>
+
+</body>
+
+</html>

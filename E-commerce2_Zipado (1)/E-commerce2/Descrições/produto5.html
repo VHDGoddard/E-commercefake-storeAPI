@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/Descrições/descricoes.css" rel="stylesheet">
+    <script src="/E-commerce/jquery-3.7.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/8abc0a1ef2.js" crossorigin="anonymous"></script>
+    <title>Pakistan Store</title>
+</head>
+<body>
+
+<header> 
+    <img src="/E-commerce2/imagens/paaaaaakistan.avif" alt="logo" id="logo">
+    <p>Vinícius Henrique Dutra Goddard <br>Ciências da Computação PUC-MINAS - 445576</p>
+</header>
+
+<div class="menu">
+  <div class="topnav">
+    <a href="/E-commerce/index.html">Home</a>
+    <a href="#adocao" class="em_desenvolvimento">Minha Conta</a>
+    <a href="#form" class="em_desenvolvimento">Login</a>
+    <a href="#contato" class="em_desenvolvimento">Contato</a>
+  </div>
+    
+</div>
+
+<main>
+      <div class="descricao" style="display: none">
+
+      </div>
+
+      <div class="descricao" style="display: none">
+
+      </div>
+
+      <div class="descricao" style="display: none">
+
+      </div>
+
+      <div class="descricao" style="display: none">
+
+      </div>
+
+      <div class="descricao">
+
+      </div>
+
+      <div class="descricao" style="display: none">
+
+      </div>
+
+</main>
+
+
+
+
+
+
+<script>
+  function fetchProductDetails(productId) {
+  fetch('https://fakestoreapi.com/products/${productId}')
+    .then(res => res.json())
+    .then(product => {
+      const productDetails = document.getElementById("productDetails");
+
+      const productHtml = 
+      `
+        <div>
+          <h2>${product.title}</h2>
+          <img src="${product.image}" alt="Imagem do Produto">
+          <p>Descrição: ${product.description}</p>
+          <p>Quantidade disponível: ${product.rating.count}</p>
+          <p>Preço: R$ ${product.price}</p>   
+          <a href="index.html">Voltar</a>
+        </div>
+      `;
+
+      productDetails.innerHTML = productHtml;
+    })
+    .catch(error => {
+      console.error('Erro ao obter os detalhes do produto:', error);
+    });
+}
+
+function handleProductClick(productId) {
+  fetchProductDetails(productId);
+}
+
+function toggleSubItens(button) {
+  const subItens = button.nextElementSibling;
+  subItens.classList.toggle("esconder");
+}
+
+function initialize() {
+  fetch('https://fakestoreapi.com/products')
+    .then(response => response.json())
+    .then(products => {
+      const cards = document.getElementsByClassName("descricao");
+      for (let i = 0; i < cards.length; i++) {
+        const card = cards[i];
+        const product = products[i];
+
+        const cardHtml = `
+          <div class="description">
+          <h2>${product.title}</h2>
+          <img src="${product.image}" alt="Imagem do Produto">
+          <p>Descrição: ${product.description}</p>
+          <p>Quantidade disponível: ${product.rating.count}</p>
+          <p>Preço: R$ ${product.price}</p>   
+          <a href="/E-commerce/index.html"><button>Voltar</button></a>
+        </div>`;
+
+        card.innerHTML = cardHtml;
+        card.addEventListener("click", () => handleProductClick(product.id));
+      }
+    })
+    .catch(error => {
+      console.error('Erro ao obter os produtos:', error);
+    });
+}
+
+initialize();
+</script>
+
+</body>
+</html>
